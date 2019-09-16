@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysLecture", "ArraysLecture.csproj", "{1015DEBB-27C0-44A4-99CB-230192BCAE78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1015DEBB-27C0-44A4-99CB-230192BCAE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1015DEBB-27C0-44A4-99CB-230192BCAE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1015DEBB-27C0-44A4-99CB-230192BCAE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1015DEBB-27C0-44A4-99CB-230192BCAE78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97E519F3-DB34-40D5-A404-2305E00A554F}
+	EndGlobalSection
+EndGlobal
