@@ -12,9 +12,9 @@ namespace ConstructorsLecture
 
     class Car
     {
-        public string color;
-        public string brand;
-        public int currentSpeed;
+        private string color;
+        private string brand;
+        private int currentSpeed;
 
         //default constructor: no parameters
         public Car()
@@ -30,6 +30,36 @@ namespace ConstructorsLecture
             currentSpeed = 0;
         }
 
+
+
+        public string GetColor()
+        {
+            return color;
+        }
+
+        public void SetColor(string color)
+        {
+            this.color = color;
+        }
+
+        public string GetBrand()
+        {
+            return brand;
+        }
+
+        public void SetBrand(string brand)
+        {
+            if (isBrandValid(brand))
+            {
+                this.brand = brand;
+            }
+            else
+            {
+                Console.WriteLine("Invalid brand");
+            }
+        }
+
+
         public void Accelerate(int speedIncrease)
         {
             currentSpeed += speedIncrease;
@@ -43,6 +73,20 @@ namespace ConstructorsLecture
         public void DisplaySpeed()
         {
             Console.WriteLine($"The {color} {brand} is traveling at {currentSpeed} km/h");
+        }
+
+        private bool isBrandValid(string brand)
+        {
+            List<string> brandNames = new List<string> { "Toyota", "Honda", "Ford" };
+
+            if (brandNames.Contains(brand))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

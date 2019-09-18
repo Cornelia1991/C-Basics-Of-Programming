@@ -11,15 +11,12 @@ namespace ConstructorsLecture
         static void Main(string[] args)
         {
             Car Car1 = new Car();
-            Car1.color = "red";
-            Car1.brand = "Toyota";
+            Car1.SetColor("red");
+            Car1.SetBrand("Toyota");
 
             //note: the currentspeed = 0 is definded the the construtor
 
             Car Car2 = new Car("green", "Honda");
-
-            Car2.color = "green";
-            Car2.brand = "Honda";
 
             Car1.Accelerate(20);
             Car2.Accelerate(20);
