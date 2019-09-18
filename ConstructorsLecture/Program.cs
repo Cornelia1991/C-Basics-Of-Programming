@@ -10,20 +10,13 @@ namespace ConstructorsLecture
     {
         static void Main(string[] args)
         {
-            Car Car1 = new Car();
-            Car1.SetColor("red");
-            Car1.SetBrand("Toyota");
+            Console.WriteLine(Car.GetNumCarObjects()); //output 0
 
-            //note: the currentspeed = 0 is definded the the construtor
+            Car Car1 = new Car("red", "Toyota");
+            Console.WriteLine(Car.GetNumCarObjects());//ouput 1
 
             Car Car2 = new Car("green", "Honda");
-
-            Car1.Accelerate(20);
-            Car2.Accelerate(20);
-            Car2.Decelerate(10);
-
-            Car1.DisplaySpeed();
-            Car2.DisplaySpeed();
+            Console.WriteLine(Car.GetNumCarObjects()); //output 2
 
             Console.ReadKey();
         }

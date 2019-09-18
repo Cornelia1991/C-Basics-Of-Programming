@@ -15,11 +15,14 @@ namespace ConstructorsLecture
         private string color;
         private string brand;
         private int currentSpeed;
+        static private int numCarObjects = 0;
+        //static flieds are accessed by their class Car.numCarObjects
 
         //default constructor: no parameters
         public Car()
         {
             currentSpeed = 0;
+            numCarObjects += 1; //adds one each time a constructor is called
         }
 
         //custructor "overloading"
@@ -28,9 +31,14 @@ namespace ConstructorsLecture
             color = carColor;
             brand = carBrand;
             currentSpeed = 0;
+            numCarObjects += 1; //
         }
 
-
+        //static method nust have staic fields
+        static public int GetNumCarObjects()
+        {
+            return numCarObjects;
+        }
 
         public string GetColor()
         {
