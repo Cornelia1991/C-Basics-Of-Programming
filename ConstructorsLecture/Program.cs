@@ -10,13 +10,15 @@ namespace ConstructorsLecture
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Car.GetNumCarObjects()); //output 0
+            RaceCar myRaceCar = new RaceCar();
 
-            Car Car1 = new Car("red", "Toyota");
-            Console.WriteLine(Car.GetNumCarObjects());//ouput 1
+            myRaceCar.UsedNitro();
+            myRaceCar.Decelerate(5);
 
-            Car Car2 = new Car("green", "Honda");
-            Console.WriteLine(Car.GetNumCarObjects()); //output 2
+            PickupTruck myPickupTruck = new PickupTruck();
+            myPickupTruck.Accelerate(10);
+            myPickupTruck.bedLength = 100;
+
 
             Console.ReadKey();
         }
