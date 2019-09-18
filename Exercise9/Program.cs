@@ -72,3 +72,8 @@ namespace Exercise9
         }
     }
 }
+
+//Lessons from instructors answer
+// he used and enum with directions 
+//stored the directions in a seperate method with the symbols
+//he also counted the amount of directions when complete using dirctions.Count
