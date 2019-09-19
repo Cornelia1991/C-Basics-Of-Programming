@@ -8,7 +8,17 @@ namespace ConstructorsLecture
 {
     class RaceCar : Car
     {
-        private int numNitros = 5;
+        private int numNitros;
+
+        public RaceCar(int numNitros) : base() //calling base class constructor with no parameters
+        {
+            this.numNitros = numNitros;
+        }
+
+        public RaceCar(string color, string brand, int numNitros) : base(color, brand) //calling base class overload constructor
+        {
+            this.numNitros = numNitros;
+        }
 
         public void UsedNitro()
         {
