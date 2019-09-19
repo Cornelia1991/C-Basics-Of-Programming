@@ -31,5 +31,11 @@ namespace ConstructorsLecture
                 Console.WriteLine("Out of nitro!");
             }
         }
+
+        public override void DisplaySpeed()
+        {
+            //.WriteLine($"The {Color} {brand} is traveling at {currentSpeed} km/h and has {numNitros} nitros left");
+        }
+    
     }
 }

@@ -40,6 +40,7 @@ namespace ConstructorsLecture
             return numCarObjects;
         }
 
+
         public string GetColor()
         {
             return color;
@@ -78,7 +79,9 @@ namespace ConstructorsLecture
             currentSpeed -= speedDecrease;
         }
 
-        public void DisplaySpeed()
+
+        // virtual keyword must be used to override in a class that inherates this one
+        public virtual void DisplaySpeed()
         {
             Console.WriteLine($"The {color} {brand} is traveling at {currentSpeed} km/h");
         }

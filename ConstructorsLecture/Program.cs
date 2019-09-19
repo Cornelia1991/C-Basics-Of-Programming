@@ -10,10 +10,16 @@ namespace ConstructorsLecture
     {
         static void Main(string[] args)
         {
-            RaceCar myRaceCar = new RaceCar(5);
-            RaceCar myRaceCar2 = new RaceCar("red", "Toyota", 5);
+            Car myCar = new Car("green", "Honda");
+            RaceCar myRaceCar = new RaceCar("red", "Toyota", 5);
+            PickupTruck myPickupTruck = new PickupTruck("white", "Ford", 100);
+
+            myCar.DisplaySpeed();
+            myRaceCar.DisplaySpeed();
+            myPickupTruck.DisplaySpeed();
 
             Console.ReadKey();
+
         }
     }
 }
