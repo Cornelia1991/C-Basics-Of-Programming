@@ -34,7 +34,7 @@ namespace ConstructorsLecture
 
         public override void DisplaySpeed()
         {
-            //.WriteLine($"The {Color} {brand} is traveling at {currentSpeed} km/h and has {numNitros} nitros left");
+            Console.WriteLine($"The {color} {brand} is traveling at {currentSpeed} km/h and has {numNitros} nitros left");
         }
     
     }

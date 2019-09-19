@@ -21,7 +21,7 @@ namespace ConstructorsLecture
 
         public override void DisplaySpeed()
         {
-           // Console.WriteLine($"The {color} {brand} is traveling at {currentSpeed} km/h and has a bed lebgth of {bedLength} inches");
+           Console.WriteLine($"The {color} {brand} is traveling at {currentSpeed} km/h and has a bed lebgth of {bedLength} inches");
         }
     }
 }

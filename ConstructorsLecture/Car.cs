@@ -12,10 +12,10 @@ namespace ConstructorsLecture
 
     class Car
     {
-        private string color;
-        private string brand;
-        private int currentSpeed;
-        static private int numCarObjects = 0;
+        protected string color;
+        protected string brand;
+        protected int currentSpeed;
+        static protected int numCarObjects = 0;
         //static flieds are accessed by their class Car.numCarObjects
 
         //default constructor: no parameters
