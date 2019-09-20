@@ -12,6 +12,7 @@ namespace ConstructorsLecture
 
     class Car
     {
+        //fields changed to protected to be used with override method
         protected string color;
         protected string brand;
         protected int currentSpeed;
