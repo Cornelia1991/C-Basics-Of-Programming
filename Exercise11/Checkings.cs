@@ -8,10 +8,15 @@ namespace Exercise11
 {
     class Checkings
     {
-        private string checkingMenuSelect;
+        private string menuSelect;
+        public double deposit;
+        public double withdrawl;
+        public double currentBalance = 0;
 
         public void CheckingsMenu()
         {
+            
+
             do
             {
                 Console.WriteLine("Checkings Account Menu");
@@ -19,23 +24,53 @@ namespace Exercise11
                 Console.WriteLine("2 - Withdraw");
                 Console.WriteLine("3 - Check Balance");
                 Console.WriteLine("4 - Exit");
-                checkingMenuSelect = Console.ReadLine();
+                menuSelect = Console.ReadLine();
 
-                if (checkingMenuSelect == "1")
+                if (menuSelect == "1")
                 {
-                    CheckingsDeposit();
+                    CheckingDeposit();
+                }
+                else if (menuSelect == "2")
+                {
+                    CheckingWithdraw();
+                }
+                else if (menuSelect == "3")
+                {
+                    CheckingBalance();
                 }
 
-            } while (checkingMenuSelect != "4");
+            } while (menuSelect != "4");
         }
 
-        public void CheckingsDeposit()
-        {
-            double depositAmount;
-
+        public void CheckingDeposit()
+        { 
             Console.Write("Enter the deposit amount: "); 
-            depositAmount = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"A total of ${depositAmount.ToString("F")} has been despoited into your account");
+            deposit = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"A total of ${deposit.ToString("F")} has been despoited into your account");
+            currentBalance += deposit;
+            Console.WriteLine($"Total Balance: ${currentBalance.ToString("F")}");
         }
+
+        public void CheckingWithdraw()
+        {
+            Console.Write("Enter withdrawal amount: ");
+            withdrawl = Convert.ToDouble(Console.ReadLine());
+            if (withdrawl > currentBalance)
+            {
+                Console.WriteLine("Sorry, you Don't have enough funds to witdraw that amount.");
+            }
+            else
+            {
+                Console.WriteLine($"You withdrew ${withdrawl.ToString("F")} form ${currentBalance.ToString("F")}");
+                currentBalance -= withdrawl;
+                Console.WriteLine($"Current Balance: ${currentBalance.ToString("F")}");
+            }
+        }
+
+        public void CheckingBalance()
+        {
+            Console.WriteLine($"Current Balance: ${currentBalance.ToString("F")}");
+        }
+
     }
 }
