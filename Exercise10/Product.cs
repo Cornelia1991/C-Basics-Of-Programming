@@ -8,51 +8,34 @@ namespace Exercise10
 {
     class Product
     {
-        protected int count = 0;
-
-        protected List<string> productName = new List<string>();
-        protected List<Int32> productPrice = new List<Int32>();
-        protected List<Int32> productQuantity = new List<Int32>();
-
-        protected string[] nameArray;
-        protected int[] priceArray;
-        protected int[] quantityArray;
+        protected string name;
+        protected double price;
+        protected int quantity;
 
 
-        public string[] GetNameArray() { return nameArray; }
-        public string[] SetNameArray(string[] nameArray) => this.nameArray = nameArray;
-
-        public int[] GetPriceArray() {return priceArray;}
-        public int[] SetPriceArray(int[] priceArray) => this.priceArray = priceArray;
-
-        public int[] getQuantityArray(){ return quantityArray;}
-        public int[] SetQuantityArray(int[] quantityArray) => this.quantityArray = quantityArray;
-
-
-        public void ProductInfo()
+        public void UserPrompt()
         {
-            count++; 
+            Console.Write("Enter a product name: ");
+            name = Console.ReadLine();
 
-            Console.WriteLine($"Enter Product Name: ");
-            string proName = Console.ReadLine();
-            Console.WriteLine($"Enter a price: ");
-            int proPrice = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Enter Quantitiy: ");
-            int proQuantity = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Product added to inventory!");
+            Console.Write("Enter the price: ");
+            price = Convert.ToDouble(Console.ReadLine());
 
-            productName.Add(proName);
-            productPrice.Add(proPrice);
-            productQuantity.Add(proQuantity);
-
+            Console.Write("Enterthe quantity: ");
+            quantity = Convert.ToInt32(Console.ReadLine());
         }
 
-        public void listToArray()
+        public void DisplayInfo()
         {
-            nameArray = productName.ToArray();
-            priceArray = productPrice.ToArray();
-            quantityArray = productQuantity.ToArray();
+            Console.WriteLine($"Product Name: {name}");
+            Console.WriteLine($"Price: {price.ToString("F")}");
+            Console.WriteLine($"Quantity: {quantity}");
+            Console.WriteLine($"Toal: {GetTotalValue().ToString("F")}");
+        }
 
+        public double GetTotalValue()
+        {
+            return price * quantity;
         }
 
     }

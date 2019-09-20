@@ -6,34 +6,33 @@ using System.Threading.Tasks;
 
 namespace Exercise10
 {
-    class Inventory : Product
+    static class Inventory
     {
-        private int total;
-        private List<Int32> productTotal = new List<Int32>();
-        int[] totalArray;
+        static private List<Product> product; 
 
-        Inventory()
+        static Inventory()
         {
-            DisplayInventoy();
+            product = new List<Product>();
         }
 
-
-        public void CalualateTotals()
+        static public void AddProduct(Product p)
         {
-            for (int i = 0; i < count; i++)
-            {
-                total = priceArray[i] * quantityArray[i];
-                productTotal.Add(total);
-                totalArray = productTotal.ToArray();
-            }
+            product.Add(p);
         }
 
-        public void DisplayInventoy()
+        static public void DisplayInventory()
         {
-            for(int i = 0; i < count; i++)
+            double totalinventoryValue = 0;
+            Console.WriteLine("Current Inventory: ");
+            Console.WriteLine("*****************************************\n");
+            foreach (Product p in product)
             {
-                Console.WriteLine($"You added {quantityArray[i]} {nameArray[i]} for a total of {priceArray[i]}");
+                p.DisplayInfo();
+                Console.WriteLine();
+                totalinventoryValue += p.GetTotalValue();
             }
+
+            Console.WriteLine($"Total inventory value: ${totalinventoryValue.ToString("F")}");
         }
     }
 }

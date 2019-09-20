@@ -24,11 +24,13 @@ namespace Exercise10
 
                 if (menuOption == "1")
                 {
-                    product.ProductInfo();
+                    Product p = new Product();
+                    p.UserPrompt();
+                    Inventory.AddProduct(p);
                 }
                 else if (menuOption == "2")
                 {
-                    //Inventory();
+                    Inventory.DisplayInventory();
                 }
                 else if (menuOption == "3")
                 {
