@@ -20,6 +20,13 @@ namespace Exercise11
             Console.WriteLine($"You earned ${interest.ToString("F")} in interest");
             currentBalance += interest;
             Console.WriteLine($"Total Balance: ${currentBalance.ToString("F")}");
+            Console.WriteLine();
+        }
+
+        public override void Balance()
+        {
+            Console.WriteLine($"Savings Account Balance: ${currentBalance.ToString("F")}");
+            Console.WriteLine();
         }
 
     }

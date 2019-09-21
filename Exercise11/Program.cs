@@ -14,7 +14,6 @@ namespace Exercise11
 
             Checkings checkings = new Checkings();
             Savings savings = new Savings();
-            Balance balance = new Balance();
 
             do
             {
@@ -23,6 +22,7 @@ namespace Exercise11
                 Console.WriteLine("2 - Saving Account");
                 Console.WriteLine("3 - Check Balance");
                 Console.WriteLine("4 - Exit");
+                Console.WriteLine();
                 mainMenuSelect = Console.ReadLine();
 
                 if (mainMenuSelect == "1")
@@ -35,7 +35,8 @@ namespace Exercise11
                 }
                 else if (mainMenuSelect == "3")
                 {
-                    balance.WholeBalance();
+                    checkings.Balance();
+                    savings.Balance();
                 }
             } while (mainMenuSelect != "4");
 
