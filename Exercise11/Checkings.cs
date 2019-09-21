@@ -8,10 +8,13 @@ namespace Exercise11
 {
     public class Checkings
     {
+        Balance balance = new Balance();
+
         protected string menuSelect;
         protected double deposit;
         protected double withdrawl;
         protected double currentBalance = 0;
+        public double finalBalance;
 
         public void SubMenu()
         {
@@ -22,8 +25,8 @@ namespace Exercise11
                 Console.WriteLine("Account Menu");
                 Console.WriteLine("1 - Desposit");
                 Console.WriteLine("2 - Withdraw");
-                Console.WriteLine("3 - Check Balance");
-                Console.WriteLine("4 - Exit");
+                //Console.WriteLine("3 - Check Balance");
+                Console.WriteLine("3 - Exit");
                 menuSelect = Console.ReadLine();
 
                 if (menuSelect == "1")
@@ -34,10 +37,10 @@ namespace Exercise11
                 {
                     Withdraw();
                 }
-                else if (menuSelect == "3")
-                {
-                    Balance();
-                }
+                //else if (menuSelect == "3")
+                //{
+                //    Balance();
+                //}
 
             } while (menuSelect != "4");
         }
@@ -49,6 +52,8 @@ namespace Exercise11
             Console.WriteLine($"A total of ${deposit.ToString("F")} has been despoited into your account");
             currentBalance += deposit;
             Console.WriteLine($"Total Balance: ${currentBalance.ToString("F")}");
+            
+            
         }
 
         public void Withdraw()
@@ -71,6 +76,13 @@ namespace Exercise11
         {
             Console.WriteLine($"Current Balance: ${currentBalance.ToString("F")}");
         }
+
+        public double DisplayBalance()
+        {
+            
+            return finalBalance;
+        }
+
 
     }
 }

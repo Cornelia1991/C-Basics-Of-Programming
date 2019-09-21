@@ -14,6 +14,7 @@ namespace Exercise11
 
             Checkings checkings = new Checkings();
             Savings savings = new Savings();
+            Balance balance = new Balance();
 
             do
             {
@@ -31,6 +32,10 @@ namespace Exercise11
                 else if (mainMenuSelect == "2")
                 {
                     savings.SubMenu();
+                }
+                else if (mainMenuSelect == "3")
+                {
+                    balance.WholeBalance();
                 }
             } while (mainMenuSelect != "4");
 
