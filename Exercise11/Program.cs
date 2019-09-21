@@ -13,6 +13,8 @@ namespace Exercise11
             string mainMenuSelect;
 
             Checkings checkings = new Checkings();
+            Savings savings = new Savings();
+
             do
             {
                 Console.WriteLine("Welcome Please Make A Selection");
@@ -24,7 +26,11 @@ namespace Exercise11
 
                 if (mainMenuSelect == "1")
                 {
-                    checkings.CheckingsMenu();
+                    checkings.SubMenu();
+                }
+                else if (mainMenuSelect == "2")
+                {
+                    savings.SubMenu();
                 }
             } while (mainMenuSelect != "4");
 

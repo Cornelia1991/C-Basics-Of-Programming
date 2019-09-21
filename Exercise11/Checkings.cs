@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Exercise11
 {
-    class Checkings
+    public class Checkings
     {
-        private string menuSelect;
-        public double deposit;
-        public double withdrawl;
-        public double currentBalance = 0;
+        protected string menuSelect;
+        protected double deposit;
+        protected double withdrawl;
+        protected double currentBalance = 0;
 
-        public void CheckingsMenu()
+        public void SubMenu()
         {
             
 
             do
             {
-                Console.WriteLine("Checkings Account Menu");
+                Console.WriteLine("Account Menu");
                 Console.WriteLine("1 - Desposit");
                 Console.WriteLine("2 - Withdraw");
                 Console.WriteLine("3 - Check Balance");
@@ -28,21 +28,21 @@ namespace Exercise11
 
                 if (menuSelect == "1")
                 {
-                    CheckingDeposit();
+                    Deposit();
                 }
                 else if (menuSelect == "2")
                 {
-                    CheckingWithdraw();
+                    Withdraw();
                 }
                 else if (menuSelect == "3")
                 {
-                    CheckingBalance();
+                    Balance();
                 }
 
             } while (menuSelect != "4");
         }
 
-        public void CheckingDeposit()
+        public virtual void Deposit()
         { 
             Console.Write("Enter the deposit amount: "); 
             deposit = Convert.ToDouble(Console.ReadLine());
@@ -51,7 +51,7 @@ namespace Exercise11
             Console.WriteLine($"Total Balance: ${currentBalance.ToString("F")}");
         }
 
-        public void CheckingWithdraw()
+        public void Withdraw()
         {
             Console.Write("Enter withdrawal amount: ");
             withdrawl = Convert.ToDouble(Console.ReadLine());
@@ -67,7 +67,7 @@ namespace Exercise11
             }
         }
 
-        public void CheckingBalance()
+        public void Balance()
         {
             Console.WriteLine($"Current Balance: ${currentBalance.ToString("F")}");
         }

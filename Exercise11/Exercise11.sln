@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise11", "Exercise11.csproj", "{6EB391C2-535A-4A49-9701-CE1D52360FA3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B2E8BA2F-6C36-45FA-8DEB-C57D9C0F5C7B}"
+	ProjectSection(SolutionItems) = preProject
+		Savings.cs = Savings.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
